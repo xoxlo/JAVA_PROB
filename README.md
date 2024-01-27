@@ -57,17 +57,17 @@ public class Prob2 {
 ~~~
 public class Prob2_2 {
 	public static void main(String[] args) {
-		int[][] gugudan = new int[9][9];
-		for ( int dan = 0; dan < 9; dan++) {
-			for ( int i = 0; i < 9 ; i++) {
-				gugudan[dan][i] = (dan+1)*(i+1);
+		int[][] gugudan = new int[9][9];	// 크기가 행9, 열9 인 2차원 배열 생성
+		for ( int dan = 0; dan < 9; dan++) {	// 1단부터 9단
+			for ( int i = 0; i < 9 ; i++) {	// x1 , x2 , ..... x9까지
+				gugudan[dan][i] = (dan+1)*(i+1);	// 초기값이 0이니까 +1 해서 곱해줌
 			}
 		}
-		System.out.println("X  1  2  3  4  5  6  7  8  9");
-		for ( int dan = 0; dan < 9; dan++) {
-			System.out.printf("%-1d",dan+1);
+		System.out.println("X  1  2  3  4  5  6  7  8  9");	// 첫번째 행
+		for ( int dan = 0; dan < 9; dan++) {	// 9단까지 반복
+			System.out.printf("%-1d",dan+1);	// 세로 열 하나를 먼저 출력
 			for ( int i = 0; i < 9 ; i++) {
-				System.out.printf("%3d", gugudan[dan][i]);
+				System.out.printf("%3d", gugudan[dan][i]);	// 구구단 출력
 			}
 			System.out.println();
 		}
